@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    image-resolution: from-image;
+    background-image: url("cool-background.png");
+}
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding:  0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: justify;
+}
+.logo{
+    width: 220px;
+    cursor: pointer;
+    margin-top: -6.5%;
+}
+ul{
+    margin-top: -2%;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.slide-container{
+    max-width: 1220px;
+    width: 100%;
+    background-color: transparent;
+    padding: 40px 0;
+    margin-left: 8%;
+}
+.slide-content{
+    margin: 0 40px;
+}
+.card{
+    
+    border-radius: 25px;
+    background-color: #fff;
+}
+.image-content ,.card-content{
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px 25px 0;
+}
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100;
+    object-fit: cover;
+    border-radius: 75%;
+    border: 4px solid #fff;
+}
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+.description{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+}
+.image-content{
+    row-gap: 5px;
+    position: relative;
+    background-image: url("cool-background.png");
+    padding: 25px 0;
+    
+}
+.button{
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 16px;
+    background-image: url("cool-background.png");
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button:hover{
+    background-image: url("cool-background.png");
+}
+.overlay::before,.overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px; 
+    width: 40px;
+    background-color: #132353;
+} 
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #fff;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px 25px 0 25px;
+}
+.swiper-navBtn{
+    color: yellow;
+    transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+    color: yellow;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+    font-size: 40px;
+}
+.swiper-button-next{
+    right: 0;
+
+}
+.swiper-button-prev{
+    left: 0;
+    
+}
+.swiper-pagination.bullet{
+    background-color: yellow;
+    opacity: 1;
+    
+}
+.swiper-pagination.bullet-active{
+    background-color: yellow;
+}
+
+@media screen and (max-width: 768px) {
+    .slide-content{
+        margin: 0 10px;
+    }
+    .swiper-navBtn{
+        display: none;
+    }
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
